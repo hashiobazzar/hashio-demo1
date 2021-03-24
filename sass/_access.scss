@@ -1,0 +1,33 @@
+.access {
+  background-image: url(../images/bg.jpg);
+}
+.access-content{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  padding-bottom: 30px;
+}
+.access-img {
+  width: 47%;
+}
+.access-text {
+  width: 48%;
+  // white-space: pre-line;
+  line-height: 3.2rem;
+}
+.access-map {
+  margin: 0 auto;
+  position: relative;
+  padding-top: 40%;
+  width: 50%;
+  & iframe {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}

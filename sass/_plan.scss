@@ -1,0 +1,38 @@
+.plan {
+  background-image: url(../images/bg02.jpg);
+
+}
+
+
+.plan-content-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.plan-content {
+  width: 32%;
+  // background-color: aqua;
+}
+.plan-img {
+  position: relative;
+  width: 100%;
+  padding-top: 66%;
+  // overflow: hidden;
+  // imgにobject-fit:cover かけているので不要なのかも
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* 画像の最大サイズは枠の1.5倍まで */
+    // max-width: 100%;
+    // max-height: 100%;
+  } 
+}
+.plan-text {
+  h6 {
+    font-size: 2rem;
+    padding: 10px 0;
+  }
+}

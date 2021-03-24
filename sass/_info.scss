@@ -1,0 +1,46 @@
+.info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.info-img {
+  position: relative;
+  width: 25%;
+  padding-top: 25%;
+  // overflow: hidden;
+  // imgにobject-fit:cover かけているので不要なのかも
+}
+.info-img-i {
+  position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    /* 画像の最大サイズは枠の1.5倍まで */
+    // max-width: 100%;
+    // max-height: 100%;
+}
+.info-item {
+  display: flex;
+  padding: 10px;
+  background-color: #f6f6f6;
+}
+.info-text {
+  width: 75%;
+  padding: 10px;
+  line-height: 2.4rem;
+  // white-space: pre-line;
+}
+.plan-date {
+  font-size: 1.4rem;
+}
+.info-tab-name {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.info-tab-1st {
+  padding-right: 40px;
+}
