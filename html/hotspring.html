@@ -25,54 +25,64 @@
 </head>
 
 <body>
+
   <!-- header -->
-  <header class="header">
-    <div class="header-tittle">
-      <span class="header-logo"><img src="../images/logo01.png" alt="ロゴ">
-      </span>
-      <h1>石井花壇</h1>
-    </div>
-    <div class="header-nav">
+  <header class="header mode-annex" id="header">
+    <a class="header-tittle-wrapper " href="#fv">
+      <div class="g-logo">
+        <img src="../images/logo02.png" alt="ロゴ">
+      </div>
+      <h1 class="header-tittle mode-annex">石井花壇</h1>
+    </a>
+    <div class="header-nav mode-annex">
       <ul class="header-pc">
-        <li class="header-pc-li">お部屋</li>
-        <li class="header-pc-li">お食事</li>
-        <li class="header-pc-li">温泉</li>
+        <li class="header-pc-li"><a class="header-pc-a" href="#room">お部屋</a></li>
+        <li class="header-pc-li"><a class="header-pc-a" href="#cuisine">お食事</a></li>
+        <li class="header-pc-li"><a class="header-pc-a" href="#hotspring">温泉</a></li>
       </ul>
+
       <ul class="header-sp">
-        <li class="header-sp-li">お部屋</li>
-        <li class="header-sp-li">お食事</li>
-        <li class="header-sp-li">温泉</li>
+        <li class="header-sp-li"><a class="header-pc-a"  href="#room">お部屋</a></li>
+        <li class="header-sp-li"><a class="header-pc-a"  href="#cuisine">お食事</a></li>
+        <li class="header-sp-li"><a class="header-pc-a"  href="#hotspring">温泉</a></li>
       </ul>
-      <a href="#reserve" class="header-btn">
-        <span class="header-reserve-logo"></span>
-        <span class="header-reserve-text">宿泊予約</span>
-      </a>
     </div>
+    <a href="#reserve" class="header-btn">
+      <div class="header-reserve-logo">
+        <img src="../images/calender.png" alt="予約帳のアイコン">
+      </div>
+      <span class="header-reserve-text">宿泊予約</span>
+    </a>
   </header>
   <!-- //header -->
+ 
 
-
-  <!-- annex-fv -->
-  <div class="annex-fv">
-    <img src="../images/oheya-header.jpg" alt="部屋からの眺め">
-    <p class="annex-tittle">温泉</p>
+  <!-- fv -->
+  <div class="fv-annex">
+    <img src="../images/onsen-top.jpg" alt="温泉">
+    <p class="fv-annex-tittle">温泉</p>
   </div>
-  <!-- //annex-fv -->
+  <!-- //fv -->
 
   <!-- annex-main -->
   <div class="annex-main">
     <div class="annex-bread">
     </div>
-    <p>心も身体も癒やす汐の温泉。
-      湯あたりしにくく、赤ちゃんから年配の方までどなたでもゆっくりと安心して入っていただけます。
-      柔らかく優しい湯にじっくりと漬かれば、心身共にリラックスできます。</p>
+    <div class="annex-lead">
+      <p class="annex-lead-text">
+        心も身体も癒やす汐の温泉。
+      </p>
+     <p class="annex-lead-text">湯あたりしにくく、<br class="mode-sp"> 赤ちゃんから年配の方までどなたでも<br class="mode-pc">ゆっくりと安心して入っていただけます。</p>
+    <p class="annex-lead-text">柔らかく優しい湯にじっくりと浸かれば、<br class="mode-tab">心身共にリラックスできます。</p>
+    </div>
 
-    <div class="annex-content">
+    <div class="annex-content mode-odd">
       <div class="annex-img">
         <img src="../images/onsen01.jpg" alt="山と温泉">
       </div>
+      <div class="annex-bg"></div>
       <div class="annex-text-wrapper">
-        <p class="annex-sub-tittle">貸し切り露天風呂「雲居の湯」</p>
+        <p class="annex-sub-tittle">貸し切り露天風呂<br class="mode-pc">「雲居の湯」</p>
         <p class="annex-text-top">弱酸性の湯質が優しく肌を包み込むような心地よさ
           最上階の露天風呂「雲居の湯」では、湯冷めしにくい食塩泉を
           熱海の町並みを遠方に望みながら・・・</p>
@@ -80,12 +90,13 @@
       </div>
     </div>
 
-    <div class="annex-content">
+    <div class="annex-content mode-even">
       <div class="annex-img">
         <img src="../images/onsen02 - コピー.jpg" alt="乳白色の温泉">
       </div>
+      <div class="annex-bg"></div>
       <div class="annex-text-wrapper">
-        <p class="annex-sub-tittle">美肌を促す乳白色の硫黄泉を</p>
+        <p class="annex-sub-tittle">美肌を促す乳白色の<br class="mode-pc">硫黄泉を</p>
         <p class="annex-text-top">まじりっけなしの白いにごり湯。鳥海山から引いた酸性の強い硫酸塩泉を、
           たっぷりと掛け流しています。
           四季の移り変わりを、天然温泉の湯に浸りながら味わってください。</p>
@@ -93,35 +104,48 @@
       </div>
     </div>
 
-    <p>温泉の効能</p>
-    <dl class="annex-dl">
-      <dt class="annex-dt">効能</dt>
-      <dd class="annex-dd">神経痛・慢性関節リューマチ・腰痛・冷え性・慢性婦人病・うちみなど</dd>
-      <dt class="annex-dt">泉質</dt>
-      <dd class="annex-dd">ナトリウム・カルシウム-塩化物泉</dd>
-      <dt class="annex-dt">飲用効果</dt>
-      <dd class="annex-dd">弱塩化物泉は肌にやわらかなため、高齢者や病後の回復期によく、飲用すれば慢性便秘や慢性消化
-        器病に効果があります。</dd>
-    </dl>  
+    <div class="annex-hs">
+      <p class="annex-hs-tittle">温泉の効能</p>
+      <ul class="annex-row">
+        <li class="annex-row-name">効能</li>
+        <li class="annex-row-text">神経痛・慢性関節リューマチ・腰痛・冷え性・慢性婦人病・うちみなど</li>
+      </ul>
+      <ul class="annex-row">
+        <li class="annex-row-name">泉質</li>
+        <li class="annex-row-text">ナトリウム・カルシウム-塩化物泉</li>
+      </ul>
+     <ul class="annex-row">
+        <li class="annex-row-name">飲用効果</li>
+        <li class="annex-row-text">弱塩化物泉は肌にやわらかなため、高齢者や病後の回復期によく、飲用すれば慢性便秘や慢性消化
+          器病に効果があります。</li>
+     </ul>
+    </div>  
   </div>
   <!-- //annex-main -->
 
-   <!-- bottom -->
-   <section class="bottom">
-    <div class="bottom-content">
-      <p class="bottom-text">お部屋
-        お料理
-        温泉
-      </p>
-      <span class="g-logo">
-        <img src="../images/logo02.png" alt="ロゴ">
-      </span>
-      <h5 class="g-tittle">石井花壇</h5>
-      <p>〒000-0000 山形県鶴岡市xxxxxxxxxxx</p>
-      <p>TEL.000-0000-0000 FAX.00-0000-0000</p>
+  <!-- bottom -->
+  <section class="bottom">
+    <div class="bottom-content mode-odd">
+      <div class="bottom-text">
+        <a href="#room">お部屋</a>
+        <a href="#cuisine">お料理</a>
+        <a href="#hotspring">温泉</a>
+      </div>
+      <a href="#fv">
+        <div class="g-logo">
+          <img src="../images/logo02.png" alt="ロゴ">
+        </div>
+        <h5 class="g-tittle">石井花壇</h5>
+      </a>
+      <div class="bottom-info">
+        <p>〒000-0000 山形県鶴岡市xxxxxxxxxxx</p>
+        <p>TEL.000-0000-0000 FAX.00-0000-0000</p>
+      </div>
     </div>
   </section>
   <!-- //bottom -->
+
+  
 
   <!-- footer -->
   <footer class="footer">

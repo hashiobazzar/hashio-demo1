@@ -11,9 +11,19 @@ $(function(){
       $header.addClass("is-white");
     }
   // $header.css("background-color","red");  
-
   });
 
+  // お知らせのタブ
+    $(".info-tab").on("click",function(){
+  
+     $(".info-tab").removeClass("is-open");
+     $(".info-tab-content").removeClass("is-open");
+     $(this).addClass("is-open");
+     var $id = $(this).data("id");
+     $("#" + $id).addClass("is-open");
+  
+    });
+  
   
 
 });

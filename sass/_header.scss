@@ -7,24 +7,32 @@
   height: 80px;
   // background-color: aqua;
   padding: 0 2rem;
+  a {
+    color: #fff;
+  }
 }
-.header-tittle {
+.header-tittle-wrapper {
   display: flex;
   font-size: 3.2rem;
   line-height: 4rem;
   font-family: "Noto Sans JP", sans-serif;
+  // font-weight: 800;
 }
 .header-logo {
   width: 40px;
   height: 40px; 
 }
-.header-nav {
+.header-tittle {
   color: #fff;
+  line-height: 4rem;
+  letter-spacing: 1vw;
+  margin-left: 2vw;
 }
 .header-pc {
   display: flex;
 }
 .header-pc-li {
+  // font-weight: 800;
   padding-left: 2rem;
   &:nth-child(1) {
     padding-left: 3rem;
@@ -49,7 +57,25 @@
   height: 22px;
   // background-color: aqua;
   margin-right: 1rem;
+  img{
+    vertical-align: top;
+  }
 }
 .header-reserve-text {
   line-height: 55px;
 }
+
+// 下層ページ
+
+.header.mode-annex {
+  background-color: #fff;
+}
+.header-nav.mode-annex 
+  a {
+    color: #000;
+  }
+.header-tittle.mode-annex {
+  color: #000;  
+}
+
+

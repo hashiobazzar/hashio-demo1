@@ -1,0 +1,28 @@
+$pc_lg: 1200px; //PC(Large)
+$pc: 1024px; // PC
+$tab: 680px; // タブレット
+$sp: 520px;  // スマホ
+
+@mixin pc_lg {
+  @media (max-width: $pc_lg) {
+    @content;
+  } 
+}
+@mixin pc {
+  @media (max-width: $pc) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: $tab) {
+    @content;
+  }
+}
+@mixin sp {
+  @media (max-width: $sp) {
+    @content;
+  }
+}
+@mixin black {
+  color: #000; 
+}

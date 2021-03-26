@@ -2,9 +2,15 @@
   "mixin",
   "g",
   "is",
-  // エリア別
+  "mode",
+
+  // トップページ
   "header",
-  "fv", "greeting", "about", "plan", "info", "access", "bottom", "footer";
+  "fv", "greeting", "about", "plan", "info", "access", "bottom", "footer",
+  
+  // 下層ページ
+  "annex";
+
 
 //  タグ
 
@@ -16,7 +22,7 @@ body {
   font-size: 1.6rem;
   // letter-spacing: .5em;
   color: #333;
-  font-weight: bold;
+  // font-weight: bold;
   line-height: 1.7;
   // white-space: pre-line;
   // font-family: “Yu Mincho”, “游明朝”, “游明朝体”, “YuMincho”,
@@ -35,8 +41,8 @@ h3,
 h4,
 h5,
 h6 {
-  // font-weight: normal;
-  font-weight: bold;
+  font-weight: normal;
+  // font-weight: bold;
 }
 
 img,
@@ -119,10 +125,6 @@ section {
 
 h1 {
   font-size: 3.2rem;
-  color: #fff;
-  line-height: 4rem;
-  letter-spacing: 2rem;
-  margin-left: 2rem;
 }
 
 // h2 {

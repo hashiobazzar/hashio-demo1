@@ -1,0 +1,166 @@
+@import "mixin";
+
+// お部屋、お料理、温泉共通
+
+.annex-bread {
+  padding: 20px;
+}
+.annex-lead {
+  padding: 30px 0;
+  @include pc_lg {
+    padding-bottom: 0;
+  }
+  .mode-pc {
+    display: none;
+    @include pc {
+      display: block;
+    }
+  }
+  .mode-tab {
+    display: none;
+    @include tab {
+      display: block;
+    }
+  }
+}
+.annex-lead-text {
+  text-align: center;
+  line-height: 3.2rem;
+  @include tab {
+    padding: 5px 0;
+  }
+}
+.annex-content {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  @include pc_lg {
+    position: static;
+    height: auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: 50px auto 0;
+    background-color: #f4f4f4;
+    &:last-of-type {
+      margin-bottom: 50px;
+    }
+  }
+}
+.annex-text-wrapper {
+  position: absolute;
+  top: 18%;
+  width: 420px;
+  z-index: 20;
+  // white-space: pre-line;
+  .mode-odd & {
+    right: 18%;
+  }
+  .mode-even & {
+    left: 18%;
+  }
+  @include pc_lg {
+    position: static;
+    // width: 90%;
+    margin: 0 auto;
+  }
+  @include tab {
+    width: 80%;
+  }
+}
+.annex-sub-tittle {
+  font-size: 2.4rem;
+  @include pc {
+    text-align: center;
+  }
+  .mode-pc {
+    display: none;
+    @include pc {
+      display: block;
+    }
+  }
+}
+.annex-text-top {
+  padding: 20px 0;
+  line-height: 3.2rem;
+}
+.annex-text-bottom {
+  padding-bottom: 30px;
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+.annex-img {
+  position: absolute;
+  z-index: 20;
+  width: 30%;
+  height: 300px;
+  .mode-odd & {
+    left: 15%;
+  }
+  .mode-even & {
+    right: 15%;
+  }
+  @include pc_lg {
+    position: static;
+    margin: 0 auto;
+    padding: 30px 0;
+    width: 80%;
+    max-width: 900px;
+  }
+}
+.annex-bg {
+  position: absolute;
+  top: 10%;
+  z-index: 10;
+  background-color: #f4f4f4;
+  width: 800px;
+  height: 400px;
+  .mode-odd & {
+    right: 15%;
+  }
+  .mode-even & {
+    left: 15%;
+  }
+  @include pc_lg {
+    display: none;
+  }
+}
+
+// 温泉
+
+.annex-hs-tittle {
+  font-size: 2.6rem;
+  text-align: center;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e7e7e7;
+}
+.annex-hs {
+  width: 70%;
+  margin: 70px auto 90px;
+  padding-top: 70px;
+  border-top: 1px solid #e7e7e7;
+}
+.annex-row {
+  display: flex;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 10px 0;
+  @include sp {
+    display: block;
+  }
+}
+.annex-row-name {
+  width: 25%;
+  @include sp {
+    display: inline-block;
+    width: auto;
+    border-bottom: 1px solid #e7e7e7;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+}
+.annex-row-text {
+  width: 75%;
+  @include sp {
+    width: 100%;
+  }
+}
+

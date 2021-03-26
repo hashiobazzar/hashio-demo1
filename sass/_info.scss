@@ -1,3 +1,9 @@
+.info-tab-content {
+  display: none;
+}
+.info-tab-content.is-open {
+  display: block;
+}
 .info-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -41,6 +47,14 @@
   text-align: center;
   margin-bottom: 30px;
 }
-.info-tab-1st {
-  padding-right: 40px;
+.info-tab { 
+  padding: 10px 20px;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+}
+.info-tab.is-open {
+  text-decoration: underline;
+
 }
