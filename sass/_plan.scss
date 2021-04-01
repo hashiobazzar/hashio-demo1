@@ -1,13 +1,23 @@
+@import "mixin";
+
 .plan {
   background-image: url(../images/bg02.jpg);
+  
+  background-size: cover;
 }
 .plan-content-wrapper {
   display: flex;
   justify-content: space-between;
+  @include tab_lg {
+    display: block;
+  }
 }
 .plan-content {
   width: 32%;
   // background-color: aqua;
+  @include tab_lg {
+    width: 100%;
+  }
 }
 .plan-img {
   position: relative;
@@ -32,4 +42,11 @@
     font-size: 2rem;
     padding: 10px 0;
   }
+  @include tab_lg {
+    padding: 0 4vw;
+    margin-bottom: 50px; 
+  }
+}
+.plan-text-3rd {
+  margin-bottom: 0;
 }

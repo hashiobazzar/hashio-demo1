@@ -8,13 +8,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10px;
+  @include tab_lg {
+    display: block;
+  }
 }
 .info-img {
   position: relative;
   width: 25%;
   padding-top: 25%;
-  // overflow: hidden;
+  overflow: hidden;
+  display: inline-block;
   // imgにobject-fit:cover かけているので不要なのかも
+  @include sp {
+    width: 40%;
+    }
 }
 .info-img-i {
   position: absolute;
@@ -29,20 +36,33 @@
 }
 .info-item {
   display: flex;
+  align-items: center;
   padding: 10px;
   background-color: #f6f6f6;
+  @include tab_lg {
+    padding: 20px;margin-bottom: 20px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+  }
 }
 .info-text {
   width: 75%;
   padding: 10px;
   line-height: 2.4rem;
-  // white-space: pre-line;
+ @include tab_lg {
+   padding: 20px;
+   padding-right: 0;
+ }
+ @include sp {
+   font-size: 1.4rem;
+ }
 }
 .plan-date {
   font-size: 1.4rem;
 }
 .info-tab-name {
-  width: 40%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 30px;

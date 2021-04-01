@@ -1,27 +1,49 @@
+@import "mixin";
+
 .greeting {
   height: 720px;
   width: 100%;
   background-image: url(../images/bg.jpg);
-  position: relative;
+  // position: relative;
   writing-mode: vertical-rl;
   white-space: pre-line;
+  @include pc {
+    writing-mode: horizontal-tb;
+    // white-space: normal;
+    padding: 50px 4%;
+    text-align: center;
+    height: auto;
+  }
 }
 .greeting-tittle-right {
   padding-top: 60px;
   padding-right: 25%;
   font-size: 2.8rem;
   letter-spacing: 10px;
+  @include pc_lg {
+    padding-right: 10%;
+  }
+  @include pc {
+    padding: 0;
+  }
 }
 .greeting-tittle-left {
   padding-top: 130px;
   font-size: 2.8rem;
+  @include pc {
+    padding: 0;
+  }
   
 }
 .greeting-text {
   padding-top: 130px;
   padding-right: 10%;
-  line-height: 32px;
+  line-height: 22px;
   letter-spacing: 6px;
+  @include pc {
+    padding-top: 15px;
+    padding-right: 0;
+  }
 }
 .greeting-name {
   padding-top: 410px;
@@ -30,4 +52,9 @@
   line-height: 32px;
   font-size: 2.2rem;
   letter-spacing: 5px;
+  @include pc {
+    padding: 0;
+    padding-top: 15px;
+   
+  }
 }

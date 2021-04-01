@@ -2,6 +2,9 @@
   font-size: 3.6rem;
   text-align: center;
   padding: 20px 0;
+  @include sp {
+    font-size: 3rem;
+  }
 }
 .g-logo {
   width: 40px;

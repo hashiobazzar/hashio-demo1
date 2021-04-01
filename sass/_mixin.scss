@@ -1,7 +1,9 @@
 $pc_lg: 1200px; //PC(Large)
 $pc: 1024px; // PC
+$tab_lg: 900px; //タブレット(Large)
 $tab: 680px; // タブレット
 $sp: 520px;  // スマホ
+$sp_sm: 420px; //スマホ(Small)
 
 @mixin pc_lg {
   @media (max-width: $pc_lg) {
@@ -13,6 +15,16 @@ $sp: 520px;  // スマホ
     @content;
   }
 }
+@mixin tab_lg {
+  @media (max-width: $tab_lg) {
+    @content;
+  }
+}
+@mixin tab {
+  @media (max-width: $tab) {
+    @content;
+  }
+}
 @mixin tab {
   @media (max-width: $tab) {
     @content;
@@ -20,6 +32,10 @@ $sp: 520px;  // スマホ
 }
 @mixin sp {
   @media (max-width: $sp) {
+    @content;
+  }
+}@mixin sp_sm {
+  @media (max-width: $sp_sm) {
     @content;
   }
 }

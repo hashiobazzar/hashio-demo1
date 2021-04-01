@@ -1,27 +1,59 @@
+@import "mixin";
+
 .about-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px 0;
+  &:nth-child(2) {
+    flex-direction: row-reverse;
+  }
+  @include pc {
+    display: block;
+    width: 100%;
+    padding: 20px 4%;
+    margin: 0 auto;
+  }
+  .mode-sp_sm & {
+    display: none;
+  }
+
 }
 .about-img {
   width: 60%;
   // height: 550px;
+  @include pc {
+    width: 100%;
+  }
 }
 .about-text-box {
   width: 38%;
-  padding: 4rem;
-}
-.about-content {
-  padding: 20px 0;
-  &:nth-child(2) {
-    flex-direction: row-reverse;
+  padding: 4vw;
+  @include pc {
+    width: 100%;
+  }
+  @include sp_sm {
+    padding: 4rem 2vw ;
+    
   }
 }
 .about-tittle {
   font-size: 3rem;
   line-height: 62px;
   padding-bottom: 20px;
-}
+  @include sp {
+    font-size: 2.2rem;
+    line-height: 3.8rem;
+  }
+  @include sp_sm {
+    // .mode-sp_sm & {
+    //   display: block;
+    // }
+    font-size: 2.2rem;
+    text-align: center;
+    }
+
+  }
 .about-btn {
   line-height: 55px;
   width: 170px;
@@ -29,4 +61,9 @@
   border: 2px solid #707070;
   text-align: center;
   margin-top: 20px;
+  @include sp_sm {
+    display: block;
+    margin: 20px auto;
+    
+  }
 }
