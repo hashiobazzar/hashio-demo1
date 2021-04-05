@@ -1,3 +1,4 @@
+@import "mixin";
 
 .header {
   display: flex;
@@ -6,11 +7,7 @@
   z-index: 30;
   width: 100vw;
   height: 80px;
-  // background-color: aqua;
   padding: 0 2rem;
-  a {
-    color: #fff;
-  }
 }
 .header-tittle-wrapper {
   display: flex;
@@ -19,18 +16,32 @@
   font-family: "Noto Sans JP", sans-serif;
   // font-weight: 800;
 }
-.header-logo {
+.header-logo-white {
   width: 40px;
-  height: 40px; 
+  height: 40px;
+  .x-black & {
+    display: none;
+  }
+}
+.header-logo-black {
+  .x-black & {
+    display: block;
+  }
 }
 .header-tittle {
   color: #fff;
   line-height: 4rem;
   letter-spacing: 1vw;
   margin-left: 2vw;
+  .x-black & {
+    color: #333;
+  }
 }
 .header-pc {
   display: flex;
+  @include tab {
+    display: none;
+  }
 }
 .header-pc-li {
   // font-weight: 800;
@@ -39,12 +50,39 @@
     padding-left: 3rem;
   }
 }
-.header-sp {
+.header-tab {
   display: none;
+  @include tab {
+    .mode-active & {
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 50%;
+      transform: translateX(50%);
+      background-color: rgba(0, 0, 0, 1);
+      height: 100vh;
+      width: 100vw;
+      z-index: 10;
+    }
+  }
 }
+.header-tab-ul {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: 100%;
+      width: 100%;
+    }
+    .header-tab-li {
+      text-align: center;
+      line-height: 70px;
+      &:first-of-type {
+        margin-top: 60px;
+      }
+}
+
 .header-btn {
   display: block;
-  margin-left:auto;
+  margin-left: auto;
   background-color: #978f10;
   display: flex;
   justify-content: center;
@@ -52,13 +90,24 @@
   width: 170px;
   color: #fff;
   border-radius: 3px;
+
+  @include tab {
+    visibility: hidden; 
+    text-align: center;
+    .mode-active & {
+      visibility: inherit;
+      margin: 20px auto;
+    }
+  }
 }
+
+
 .header-reserve-logo {
   width: 22px;
   height: 22px;
   // background-color: aqua;
   margin-right: 1rem;
-  img{
+  img {
     vertical-align: top;
   }
 }
@@ -71,12 +120,9 @@
 .header.mode-annex {
   background-color: #fff;
 }
-.header-nav.mode-annex 
-  a {
-    color: #000;
-  }
-.header-tittle.mode-annex {
-  color: #000;  
+.header-nav.mode-annex a {
+  color: #000;
 }
-
-
+.header-tittle.mode-annex {
+  color: #000;
+}

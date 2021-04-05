@@ -1,0 +1,72 @@
+.modal-area {
+  box-sizing: border-box;
+}
+
+/* モーダルCSSここから */
+
+  // visibility: hidden; /* displayではなくvisibility */
+  //①↑下に続く要素が、下に潜り込まない為か？ボタンタグとディブタグを囲む親要素に高さ出してやれば、問題ないのでは。
+  //②↑displayにするとアニメーションがかからない！
+  // z-index: 10; /* サイトによってここの数値は調整 */ 
+
+
+
+
+.modal {
+  display: none;
+  opacity : 0;
+  transition: 6.4s;
+  position: absolute;
+  z-index: 30;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  width: 70%;
+  max-width: 500px;
+  padding: 40px 30px 10px;
+  background-color: #fff;
+}
+.is-active .modal {
+  display: block;
+  // visibility: visible;
+  opacity: 1;
+}
+.modal-tittle {
+  font-size: 2rem;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.modal-wrapper {
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+
+/* モーダルCSSここまで */
+
+
+/* 以下ボタンスタイル */
+.modal-open {
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #282828;
+  border-radius: 2px;
+  cursor: pointer;
+
+  // 
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+}
+
+.is-active .modal-open {
+  display: none;
+} 

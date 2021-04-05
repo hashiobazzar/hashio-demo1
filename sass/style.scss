@@ -1,14 +1,15 @@
-@import // 共通
+@import 
+ // 共通
   "mixin",
   "g",
-  "is",
+  "x",
   "mode",
 
-  // トップページ
-  "header",
-  "fv", "greeting", "about", "plan", "info", "access", "bottom", "footer",
+ //  トップページ
+  "header","hamburger",
+  "fv", "modal", "form", "greeting", "about", "plan", "info", "access", "bottom", "footer",
   
-  // 下層ページ
+ // 下層ページ限定
   "annex";
 
 

@@ -1,7 +1,9 @@
+@import "mixin";
+
 .info-tab-content {
   display: none;
 }
-.info-tab-content.is-open {
+.info-tab-content.x-open {
   display: block;
 }
 .info-grid {
@@ -40,7 +42,8 @@
   padding: 10px;
   background-color: #f6f6f6;
   @include tab_lg {
-    padding: 20px;margin-bottom: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
     &:last-of-type {
       margin-bottom: 0;
     }
@@ -74,7 +77,7 @@
     opacity: 0.7;
   }
 }
-.info-tab.is-open {
+.info-tab.x-open {
   text-decoration: underline;
 
 }

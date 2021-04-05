@@ -1,6 +1,7 @@
-// .mode-black {
-//   color: #000;
-// }
-// .mode-white {
-//   background-color: #fff;
-// }
+.mode-white {
+  background-color: $color02;
+}
+.mode-black {
+  color: $color01;
+  background-color: $color01;
+}
