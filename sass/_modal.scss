@@ -9,12 +9,9 @@
   //②↑displayにするとアニメーションがかからない！
   // z-index: 10; /* サイトによってここの数値は調整 */ 
 
-
-
-
 .modal {
+  // opacity : 0;
   display: none;
-  opacity : 0;
   transition: 6.4s;
   position: absolute;
   z-index: 30;
@@ -26,7 +23,7 @@
   padding: 40px 30px 10px;
   background-color: #fff;
 }
-.is-active .modal {
+.modal.mode-reserve {
   display: block;
   // visibility: visible;
   opacity: 1;

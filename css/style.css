@@ -45,6 +45,10 @@
           box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
 }
 
+.x-noscroll {
+  position: fixed;
+}
+
 .mode-white {
   background-color: #fff;
 }
@@ -70,6 +74,10 @@
   padding: 0 2rem;
 }
 
+.header.mode-annex {
+  background-color: #fff;
+}
+
 .header-tittle-wrapper {
   display: -webkit-box;
   display: -webkit-flex;
@@ -89,7 +97,19 @@
   display: none;
 }
 
+.mode-annex .header-logo-white {
+  display: none;
+}
+
+.header-logo-black {
+  display: none;
+}
+
 .x-black .header-logo-black {
+  display: block;
+}
+
+.mode-annex .header-logo-black {
   display: block;
 }
 
@@ -101,6 +121,10 @@
 }
 
 .x-black .header-tittle {
+  color: #333;
+}
+
+.mode-annex .header-tittle {
   color: #333;
 }
 
@@ -121,6 +145,18 @@
   padding-left: 2rem;
 }
 
+.header-pc-li a {
+  color: #fff;
+}
+
+.x-black .header-pc-li a {
+  color: #333;
+}
+
+.mode-annex .header-pc-li a {
+  color: #333;
+}
+
 .header-pc-li:nth-child(1) {
   padding-left: 3rem;
 }
@@ -130,7 +166,7 @@
 }
 
 @media (max-width: 680px) {
-  .mode-active .header-tab {
+  .x-active .header-tab {
     display: block;
     position: absolute;
     top: 0;
@@ -163,6 +199,10 @@
   line-height: 70px;
 }
 
+.header-tab-li a {
+  color: #fff;
+}
+
 .header-tab-li:first-of-type {
   margin-top: 60px;
 }
@@ -193,7 +233,7 @@
     visibility: hidden;
     text-align: center;
   }
-  .mode-active .header-btn {
+  .x-active .header-btn {
     visibility: inherit;
     margin: 20px auto;
   }
@@ -213,18 +253,6 @@
   line-height: 55px;
 }
 
-.header.mode-annex {
-  background-color: #fff;
-}
-
-.header-nav.mode-annex a {
-  color: #000;
-}
-
-.header-tittle.mode-annex {
-  color: #000;
-}
-
 @media (max-width: 680px) {
   .hamburger-button {
     display: inline-block;
@@ -239,7 +267,7 @@
   .hamburger {
     position: fixed;
     top: 20px;
-    right: 10vw;
+    right: 5vw;
     z-index: 20;
     width: 48px;
     height: 48px;
@@ -308,6 +336,84 @@
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg);
   }
+  .mode-annex .hamburger {
+    border: 1px solid #333;
+  }
+  .mode-annex .hamburger-line {
+    background-color: #333;
+  }
+  .mode-annex .hamburger-line::before, .mode-annex .hamburger-line::after {
+    background-color: #333;
+  }
+  .x-active .hamburger-line {
+    background-color: transparent;
+  }
+  .x-active .hamburger-line::before, .x-active .hamburger-line::after {
+    top: 0;
+    background-color: #fff;
+  }
+  .x-active .hamburger-line::before {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  .x-active .hamburger-line::after {
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  90% {
+    opacity: 0;
+    z-index: 9;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  8% {
+    opacity: 1;
+  }
+  17% {
+    opacity: 1;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  25% {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  90% {
+    opacity: 0;
+    z-index: 9;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .fv {
@@ -316,16 +422,43 @@
   position: relative;
 }
 
-.fv-img {
-  height: 100vh;
-  width: 100vw;
-}
-
 .fv-animation {
   top: 0;
   right: 0;
   position: absolute;
   z-index: 10;
+}
+
+.fv-img-wrapper {
+  overflow: hidden;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+.fv-img {
+  z-index: 10;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-animation: anime 21s 0s infinite;
+  animation: anime 21s 0s infinite;
+}
+
+.fv-img:nth-of-type(2) {
+  -webkit-animation-delay: 7s;
+  animation-delay: 7s;
+}
+
+.fv-img:nth-of-type(3) {
+  -webkit-animation-delay: 14s;
+  animation-delay: 14s;
 }
 
 .fv-text {
@@ -374,7 +507,6 @@
 /* モーダルCSSここから */
 .modal {
   display: none;
-  opacity: 0;
   -webkit-transition: 6.4s;
   transition: 6.4s;
   position: absolute;
@@ -389,7 +521,7 @@
   background-color: #fff;
 }
 
-.is-active .modal {
+.modal.mode-reserve {
   display: block;
   opacity: 1;
 }
@@ -500,17 +632,6 @@
   margin-left: 1%;
 }
 
-.form-textarea {
-  border: solid 2px;
-  border-radius: 2px;
-  width: 100%;
-  height: 150px;
-  margin: 40px 0 45px;
-  padding: 10px 10px;
-  resize: none;
-  background-color: #eefbfb;
-}
-
 .form-bottom {
   display: -webkit-box;
   display: -webkit-flex;
@@ -535,10 +656,48 @@
   padding-bottom: 45px;
 }
 
-@media (max-width: 900px) {
-  .form-input-wrapper {
-    width: 100%;
-  }
+.form-select-wrapper {
+  position: relative;
+  border: 2px solid #e7e7e7;
+  border-radius: 2px;
+  background-color: #eefbfb;
+  margin-bottom: 30px;
+}
+
+.form-select-wrapper::before {
+  position: absolute;
+  top: 1em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #bbb;
+  pointer-events: none;
+}
+
+.form-select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  padding: 8px 38px 8px 8px;
+}
+
+.form-select::-ms-expand {
+  display: none;
 }
 
 .greeting {
@@ -1305,10 +1464,6 @@ a:hover {
   transition: 0.3s;
 }
 
-.header a {
-  color: #fff;
-}
-
 .footer a {
   color: #fff;
 }
@@ -1323,7 +1478,8 @@ textarea {
 }
 
 input,
-textarea {
+textarea,
+select {
   font-size: 1.4rem;
   color: #333;
   font-weight: normal;

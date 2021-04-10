@@ -74,9 +74,6 @@ a {
     opacity: 0.7;
     transition: 0.3s;
   }
-  .header & {
-    color: #fff;
-  }
   .footer & {
     color: #fff;
   }
@@ -92,7 +89,8 @@ textarea {
 }
 
 input,
-textarea {
+textarea,
+select {
   font-size: 1.4rem;
   color: #333;
   font-weight: normal;
